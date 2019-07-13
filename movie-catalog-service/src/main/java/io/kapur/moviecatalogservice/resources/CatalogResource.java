@@ -26,5 +26,14 @@ public class CatalogResource {
 				.stream()
 				.map(rating -> new CatalogItem("Name", "Desc", rating
 						.getRating())).collect(Collectors.toList());
+		
+		
+		 /* Alternative way, valid for jdk 1.7
+		  * List<CatalogItem> catelogItem =new ArrayList<CatalogItem>();
+		 for(Rating rate: ratingList){
+			 catelogItem.add("Name", "Desc", rate.getRating());
+		 }
+		 return catelogItem; */
+		 
 	}
 }
